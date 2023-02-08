@@ -29,7 +29,7 @@ Point.prototype.spaceOut = function({x, y}) {
     let h = Math.sqrt((adjacent*adjacent) + (opposite*opposite))
 
     let angle = Math.asin(adjacent/h)
-    let new_length = h*1.2
+    let new_length = h*1.5
 
     let delta_x = (Math.cos(angle) * new_length) - adjacent 
     let delta_y = (Math.sin(angle) * new_length) - opposite
@@ -39,10 +39,10 @@ Point.prototype.spaceOut = function({x, y}) {
 
     this.animationId = setInterval(() => {
         ctx.clearRect(this.x-5, this.y-5, 10, 10)
-        this.x += (delta_x / 20)
-        this.y += (delta_y / 20)
+        this.x += (delta_x / 200)
+        this.y += (delta_y / 200)
         this.draw()
-    }, 100)
+    }, 10)
 }
 
 let Cloth = function() {
