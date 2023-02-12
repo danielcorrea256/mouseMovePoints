@@ -17,7 +17,7 @@ let Point = function(x, y) {
     this.moving = false
 }
 
-Point.prototype.draw = function(color="#494b4d") {
+Point.prototype.draw = function(color="whitesmoke") {
     ctx.strokeStyle = color
     ctx.beginPath()
     ctx.arc(this.x, this.y, 1, 0, 2*Math.PI)
